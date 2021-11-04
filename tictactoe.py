@@ -1,12 +1,11 @@
 # This is a tic tac toe game in python 
 
-# Choose X or O 
+
 #player X chooses first space, that space goes from nothing to X 
 #player O goes second, picks unoccupied space 
 #whichever player gets three in a row or diagonal wins the game 
 # if there is no winner there is a tie 
 
-playerChoice = ""
 
 gameBoard = ["_", "_", "_", "_", "_", "_", "_", "_", "_"]
 
@@ -35,7 +34,7 @@ def checkForWin(board):
         return True
     if board[2] != "_" and board[2] == board[5] == board[8]:
         return True
-    if board[0] != "_" and board[0] == board[1] == board[2]:
+    if board[0] != "_" and board[0] == board[4] == board[8]:
          return True
     if  board[2] != "_" and board[2] == board[4] == board[6]:
          return True
@@ -47,7 +46,7 @@ def displayGameBoard(board):
     print("2", board[3], board[4], board[5])
     print("3", board[6], board[7], board[8])
 
-playerChoice = input("Choose X or O. Player X goes first: ")
+#Game starts here 
 
 displayGameBoard(gameBoard)
 
